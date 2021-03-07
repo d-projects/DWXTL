@@ -1,0 +1,10 @@
+
+config = {
+    user: 'username', 
+    password: 'password', 
+    cluster: 'cluster',
+    name: 'db name',
+    s3_key_id: 'key id',
+    s3_key: 'key',
+    bucket: 'bucket name'
+}

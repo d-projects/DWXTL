@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import CreateSchool from '@/components/CreateSchool'
-import EditSchool from '@/components/EditSchool'
+import Form from '@/components/Form'
 import Navigation from '@/components/Navigation'
 import ViewSchool from '@/components/ViewSchool'
 
@@ -26,12 +25,12 @@ export default new Router({
     {
       path: '/create',
       name: 'CreateSchool',
-      component: CreateSchool
+      component: Form
     },
     {
       path: '/edit/:id',
       name: 'EditSchool',
-      component: EditSchool
+      component: Form
     },
     {
       path: '/school/:id',

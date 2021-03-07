@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <router-view/>
+    <footer>
+    </footer>
   </div>
 </template>
 
@@ -11,6 +13,11 @@ export default {
 </script>
 
 <style>
+
+/**
+    Styles are sort of all over the place, sorry!
+*/
+
 .custom-nav {
     background-color: #FFFFFF;
     height: 6em;
@@ -19,6 +26,23 @@ export default {
 .nav-title {
     color: #5196CB;
     margin-left: 2em;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-title {
+    font-size: 80%;
+  }
+  .custom-btn {
+    font-size: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .custom-btn {
+    font-size: 60%;
+    margin-left: 3em;
+  }
 }
 
 .nav-title:hover, a:hover {
@@ -43,6 +67,7 @@ export default {
 }
 body {
   background-color: #F7F8FC;
+  min-height: 100vh;
 }
 
 .listings {
@@ -54,10 +79,11 @@ body {
 
 .custom-card {
     text-decoration: none;
-    width: 38em;
+    width: 30em;
     background: #fff;
     display: inline-block;
     border-radius: 1em;
+    margin-bottom: 2em;
 }
 
 .custom-card:hover {
@@ -71,8 +97,8 @@ body {
 }
 
 .card-img {
-    width: 15em;
-    height: 15em;
+    width: 12em;
+    height: 12em;
     border-radius: 1em 0 0 1em;
 }
 
@@ -80,33 +106,50 @@ body {
     color: black;
     margin: 1em 0 0 2em;
     float: left;
-    width: 18em;
+    width: 15em;
     overflow: hidden;
 }
 
 .card-title {
     color: #052470;
-}
-
-.card-text {
-    font-size: 90%;
 
     /* CSS for displaying a max of 2 lines */
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-text {
+    font-size: 90%;
+
+    /* CSS for displaying a max of 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
 .listing-form {
     margin: auto;
-    width: 50%;
+    width: 60%;
     margin-bottom: 5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .listing-form {
+    width: 90%;
+  }
 }
 
 .form-group {
     padding: 0 0 1em 0;
+}
+
+.input, textarea, .school-info {
+    white-space: pre-wrap;
 }
 
 .form-group label {
@@ -145,8 +188,13 @@ button:hover, .custom-btn:hover {
     margin-left: 2em;
 }
 
-.school-info div {
-    padding: 1em 0;
+.school-about div {
+    padding: 2em 0 0 0;
+}
+
+.school-section-header {
+    margin-top: -1em;
+    margin-bottom: -1em;
 }
 
 .school-section-header h3, i {
@@ -160,6 +208,30 @@ button:hover, .custom-btn:hover {
 
 hr {
   border-top: 2px solid lightgrey;
+}
+
+@media screen and (max-width: 1000px) {
+    .school-info {
+        margin: 0;
+    }
+    .school-image {
+        width: 15em;
+        height: 15em;
+    }
+}
+
+.submit-msg {
+    color: lightgreen;
+    text-align: center;
+}
+
+.err-msg {
+    color: red;
+    text-align: center;
+}
+
+footer {
+    margin-top: 5em;
 }
 
 </style>
